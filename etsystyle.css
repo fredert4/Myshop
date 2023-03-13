@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Zeyada&display=swap');
 
-* {box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
+
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
@@ -19,38 +21,44 @@ header {
     padding: 20px;
     font-family: 'Zeyada', cursive;
 }
-header a:hover{
-    transition: all;
-}
-h1{
-    transition: .5s ease-in;
-}
-h2{
+
+h2 {
     text-align: center;
 }
+
 nav {
     text-align: center;
     background-color: #f8edd4;
 }
+
 nav a {
     display: inline-block;
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
 }
-nav a:link{
+
+a {
+    text-decoration: none;
+
+}
+
+nav a:link {
     transition: .9s;
     color: #f4d2b7;
-  }
-  nav a:visited{
-    transition:.5s;
-    color: #efdfa9;
-  }
-  nav a:hover{
+}
+
+nav a:visited {
+    transition: .5s;
+    color: #efd1a9;
+}
+
+nav a:hover {
     transition: .5s;
     color: #f3d0d0;
-  }
-  nav img {
+}
+
+nav img {
     border: .5px;
     border-radius: 13px;
     padding: 1px;
@@ -59,24 +67,115 @@ nav a:link{
     position: relative;
     top: 8px;
 }
-p{ 
+
+.prices {
+    border: 2px solid #FFB6C1;
+    border-radius: 5px;
+    border-collapse: separate;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prices th {
+    border: 2px solid #FFB6C1;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.prices td {
+    border: 2px solid #FFB6C1;
+    padding: 5px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: #efd1a9 1px;
+}
+
+p {
     text-align: center;
 }
-.column{
+
+.column {
     float: left;
     width: 33.33%;
     padding: 5px;
 }
-.row::after{
-    content:"";
+
+.column2 {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+.column3 {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
     clear: both;
     display: table;
+}
+
+.row2::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row3::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.shrink img {
+    transition: 1s ease;
+}
+
+.shrink img:hover {
+    transform: scale(0.8);
+    transition: 1s ease;
 }
 
 iframe {
     display: block;
     margin: 0 auto;
 }
+
 .clearfix {
     clear: both;
 }
+
+div.form {
+    display: block;
+    text-align: center;
+    font-family: 'Zeyada', cursive;
+    font-size: 20px;
+}
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+@media only screen and (max-width:800px) {
+
+    .prices {
+        width: 100%;
+    }
+    .video, iframe{
+        width: 100%
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .video, iframe{
+        width: 100%
+    }    
+    }
